@@ -1,0 +1,10 @@
+{
+  "default": {
+    "Host": "127.0.0.1",
+    "Port": "9000"
+  },
+
+  "development": {
+    "Host": "kilde.monolog.id"
+  }
+}

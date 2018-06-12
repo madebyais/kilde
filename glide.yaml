@@ -1,0 +1,4 @@
+package: gitlab.com/monologid/kilde
+import:
+- package: gopkg.in/yaml.v2
+  version: v2.2.1
