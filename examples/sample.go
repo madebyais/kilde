@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"gitlab.com/monologid/kilde"
+	"github.com/madebyais/kilde"
 )
 
 type configschema struct {
