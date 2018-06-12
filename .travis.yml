@@ -1,0 +1,22 @@
+dist: trusty
+
+before_install:
+  - curl https://glide.sh/get | sh
+
+# INSTALL GO
+
+language: go
+
+go:
+  - 1.8.x
+  - tip
+  - master
+
+install:
+  - glide install
+
+script:
+  - ./test.sh
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t ece23104-f435-4db7-a920-da75bc59afd0
