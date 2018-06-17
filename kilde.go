@@ -27,7 +27,9 @@ var (
 
 // New is used to initiate kilde
 func New() Interface {
-	return &Kilde{}
+	return &Kilde{
+		env: `default`,
+	}
 }
 
 // SetSchema is used to set configuration schema
