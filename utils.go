@@ -2,6 +2,7 @@ package kilde
 
 import (
 	"errors"
+	"fmt"
 	"reflect"
 )
 
@@ -23,7 +24,8 @@ func fillStructSchema(env string, configschema interface{}, schema interface{}) 
 	cfg := configschema.(map[string]interface{})
 
 	if _, ok := cfg[env]; !ok {
-		return errors.New("environment is not available on config file")
+		fmt.Println(fmt.Sprintf(`[madebyais/kilde] %s not found, set env to default`, env))
+		env = `default`
 	}
 
 	structVal := reflect.ValueOf(schema).Elem()

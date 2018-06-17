@@ -268,25 +268,6 @@ func TestReadShouldReadJson(t *testing.T) {
 	tearDown()
 }
 
-func TestReadShouldReturnErrorWhenReadJsonAndEnvNotAvailable(t *testing.T) {
-	tearUp()
-
-	s := &mockSchema{}
-
-	k := New()
-	k.SetSchema(s)
-	k.SetFilePath(filepath)
-	k.SetConfigType(`json`)
-	k.SetEnv(`development`)
-
-	err := k.Read()
-	if err == nil {
-		t.Error(`Expected an error but got no error`)
-	}
-
-	tearDown()
-}
-
 func TestReadShouldReturnErrorWhenReadFalseJson(t *testing.T) {
 	tearUpInvalidJSON()
 
